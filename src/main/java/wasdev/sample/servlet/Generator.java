@@ -46,7 +46,7 @@ public class Generator extends HttpServlet {
         response.setContentType("text/html");
         String dbName = request.getParameter("dbName");
         String attID = request.getParameter("attID");
-        bool getAttachment = request.getParameter("getAttachment");
+        Boolean getAttachment = request.getParameter("getAttachment");
         
         
         dbc = _db.createConnector("json_db", true);
