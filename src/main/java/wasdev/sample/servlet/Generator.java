@@ -52,7 +52,7 @@ public class Generator extends HttpServlet {
         dbc = _db.createConnector("json_db", true);
 		
 		
-		if(getAttachment.equalsIgnoreCase("on")){
+		if(getAttachment != null && getAttachment.equalsIgnoreCase("on")){
 			AttachmentInputStream ais = dbc.getAttachment(dbName, attID);
 			
 			String type = ais.getContentType();
@@ -65,7 +65,7 @@ public class Generator extends HttpServlet {
 			
 			response.getWriter().print(content + ";" + type);
 			
-		}else{
+		} else {
 		
 		Map<String, String> map = dbc.get(Map.class, dbName);
 		/*
