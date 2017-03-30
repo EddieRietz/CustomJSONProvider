@@ -17,10 +17,13 @@
 	<form action="Generator" method="GET">
 		<div class="form-group">
 			<label for="size">Count of entries:</label>
-			<input type="number" class="form-control" id="size">
+			<input type="number" class="form-control" name="size" id="size">
 		</div>
-		<label id="output_random" class="radio-inline"><input type="radio" name="output">Random</label>
-		<label id="output_sample" class="radio-inline"><input type="radio" name="output">Sample</label>
+		<div class="form-group">
+			<div class="checkbox">
+				<label><input type="checkbox" name="random">Random</label>
+			</div>
+		</div>
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form>
 </body>
