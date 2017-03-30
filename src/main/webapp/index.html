@@ -1,12 +1,27 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
 	<title>Custom JSON Provider</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-	
-	<!-- Call SimpleServlet to get the "Hello World" message  -->
-	<script type="text/javascript" src="index.js"></script>
+	<form action="Generator" method="GET">
+		<div class="form-group">
+			<label for="size">Count of entries:</label>
+			<input type="number" class="form-control" id="size">
+		</div>
+		<label id="output_random" class="radio-inline"><input type="radio" name="output">Random</label>
+		<label id="output_sample" class="radio-inline"><input type="radio" name="output">Sample</label>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
 </body>
 </html>
